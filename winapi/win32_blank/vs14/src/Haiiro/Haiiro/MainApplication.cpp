@@ -7,6 +7,7 @@ BOOL CMainApplication::InitInstance(HINSTANCE hInstance, LPTSTR lpCmdLine, int n
 
 	// ウィンドウクラスの登録.
 	CWindow::RegisterClass(hInstance, _T("Haiiro_MainWindow"));	// CWindow::RegisterClassで"Haiiro_MainWindow"をウィンドウクラスに登録.
+	CWindow::RegisterClass(hInstance, _T("GraphicsView"));	// CWindow::RegisterClassで"GraphicsView"をウィンドウクラスに登録.
 
 	// CMainWindowオブジェクトの作成.
 	m_pMainWindow = new CMainWindow();	// CMainWindowオブジェクトを作成し, そのポインタをm_pMainWindowに格納.

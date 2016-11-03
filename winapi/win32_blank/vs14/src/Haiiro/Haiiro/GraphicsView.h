@@ -4,19 +4,18 @@
 // ヘッダのインクルード
 // 独自のヘッダ
 #include "Window.h"		// ウィンドウクラス
-#include "GraphicsView.h"	// グラフィックスビュークラス
+// リソースIDの定義.
+#define IDC_GRAPHICS_VIEW WM_USER + 100
 
-// メインウィンドウクラス
-class CMainWindow : public CWindow {	// CWindowの派生クラス
+// グラフィックスビュークラス
+class CGraphicsView : public CWindow {	// CWindowの派生クラス
 
 	// publicメンバ
 	public:
 
-		// publicメンバ変数
-		CGraphicsView *m_pGraphicsView;	// CGraphicsViewオブジェクトポインタm_pGraphicsView.
-
 		// publicメンバ関数
 		// メンバ関数
+		virtual BOOL Create(int x, int y, int iWidth, int iHeight, HWND hWndParent, HMENU hMenu, HINSTANCE hInstance);	// ウィンドウ作成関数Create(このウィンドウ専用にカスタマイズされたもの.)
 		virtual void Destroy();	// OnCloseとOnDestroyの間に子ウィンドウなどを破棄するメンバ関数Destroy.
 		virtual int OnCreate(HWND hwnd, LPCREATESTRUCT lpCreateStruct);	// ウィンドウ作成時のハンドラOnCreate.
 		virtual void OnDestroy();	// ウィンドウ破棄時のハンドラOnDestroy.

@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="GraphicsView.cpp" />
     <ClCompile Include="MainApplication.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Window.cpp" />
@@ -154,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="GraphicsView.h" />
     <ClInclude Include="MainApplication.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="resource.h" />
